@@ -223,8 +223,8 @@ radius = 4.0
 height = 16.0
 
 [node name="player" type="CharacterBody2D"]
-collision_layer = 4
-collision_mask = 10
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_p4abj")
 heart_scene = ExtResource("2_qdvgk")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://byj6hydvb6f2o"]
+[gd_scene load_steps=10 format=4 uid="uid://byj6hydvb6f2o"]
 
 [ext_resource type="Texture2D" uid="uid://3xoy0yw27st8" path="res://Assets/sprites/world_tileset.png" id="1_hlj4k"]
 [ext_resource type="FontFile" uid="uid://b66ne0mqw1kss" path="res://Assets/fonts/PixelOperator8-Bold.ttf" id="2_7l0xn"]
@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dc35v1ppeh4of" path="res://Scenes/killzone.tscn" id="4_ncgic"]
 [ext_resource type="PackedScene" uid="uid://ca3q4rdmtvfje" path="res://Scenes/magical_platform.tscn" id="5_vw68r"]
 [ext_resource type="PackedScene" uid="uid://doa1a4br6oq8m" path="res://Scenes/slime.tscn" id="6_gkmev"]
-[ext_resource type="PackedScene" uid="uid://bid8bor2qylia" path="res://Scenes/animated_heart.tscn" id="7_u1dpj"]
-[ext_resource type="PackedScene" uid="uid://ctdw2sqfkihv4" path="res://Scenes/coin.tscn" id="8_2e3wu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmpw6"]
 texture = ExtResource("1_hlj4k")
@@ -285,9 +283,3 @@ position = Vector2(1856, -16)
 
 [node name="slime" parent="." instance=ExtResource("6_gkmev")]
 position = Vector2(1992, 0)
-
-[node name="Area2D" parent="." instance=ExtResource("7_u1dpj")]
-position = Vector2(2072, -8)
-
-[node name="coin" parent="." instance=ExtResource("8_2e3wu")]
-position = Vector2(2096, -8)

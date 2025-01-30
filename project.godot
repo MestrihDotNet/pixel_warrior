@@ -43,12 +43,10 @@ give_love={
 
 [layer_names]
 
-2d_physics/layer_1="Background Tile"
-2d_physics/layer_2="Platforms, Bridges"
-2d_physics/layer_3="Player"
-2d_physics/layer_4="Enemies"
-2d_physics/layer_5="Thrown Heart"
-2d_physics/layer_6="Kill Zone"
+2d_physics/layer_1="Enviroment"
+2d_physics/layer_2="Player"
+2d_physics/layer_3="Enemy / kill zone"
+2d_physics/layer_4="Collectables"
 
 [rendering]
 
