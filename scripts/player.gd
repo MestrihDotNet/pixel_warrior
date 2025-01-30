@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 180.0
 const JUMP_VELOCITY = -300.0
+@export var heart_scene: PackedScene
 
 
 func _physics_process(delta: float) -> void:
@@ -30,3 +31,20 @@ func _physics_process(delta: float) -> void:
 		$FlipPlayer_node2d/AnimatedSprite2D.play("idle")
 
 	move_and_slide()
+	
+	if Input.is_action_just_pressed("give_love"):
+		throw_heart()
+	
+func throw_heart():
+	if heart_scene:
+		var heart = heart_scene.instantiate()  # Create the heart instance
+		heart.position = position + Vector2(10, -10)  # Start near player
+
+		# Throw direction based on facing direction
+		heart.speed.x = 100 if not $FlipPlayer_node2d/AnimatedSprite2D.flip_h else -100  
+
+		get_parent().add_child(heart)
+
+
+func _on_killzone_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
