@@ -41,7 +41,7 @@ func throw_heart():
 		heart.position = position + Vector2(10, -10)  # Start near player
 
 		# Throw direction based on facing direction
-		heart.speed.x = 100 if not $FlipPlayer_node2d/AnimatedSprite2D.flip_h else -100  
+		heart.velocity = Vector2(100 if not $FlipPlayer_node2d/AnimatedSprite2D.flip_h else -100, 0)
 
 		get_parent().add_child(heart)
 

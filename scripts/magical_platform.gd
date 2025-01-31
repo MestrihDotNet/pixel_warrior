@@ -7,10 +7,6 @@ extends Node2D  # MagicalPlatform is a Node2D to allow free movement
 var movement: float = 0.0  # Horizontal movement speed
 var player: Node2D = null  # Reference to the player node
 
-func _ready():
-	# Ensure we have a reference to the player node if it exists
-	player = get_parent().get_node("player")  # Adjust if player is in a different location
-
 func _physics_process(delta: float) -> void:
 	# Get input direction for platform movement
 	movement = Input.get_axis("Platform_left", "platform_right") * speed * delta
@@ -20,6 +16,6 @@ func _physics_process(delta: float) -> void:
 	position.x = clamp(position.x, limit_left, limit_right)
 
 	# If the player exists and is on the platform, move them along with the platform
-	if player:
+	#if player:
 		# Only move the player horizontally if the player is on the platform
-		player.position.x += movement
+		#player.position.x += movement
